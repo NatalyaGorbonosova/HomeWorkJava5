@@ -6,15 +6,7 @@ import java.util.Map;
 // Написать программу, которая найдет и выведет повторяющиеся имена с количеством повторений. 
 // Отсортировать по убыванию популярности.
 public class task2 {
-    public static void main(String[] args) {
-        String[] emploees = new String[] {"Иван Иванов", "Иван Петров", "Сергей Козлов", "Евгений Петров", "Сергей Васильев", "Иван Смирнов", "Андрей Петров"};
-        ArrayList<String> emploeesName = getName(emploees);
-        Map<String, Integer> mapName =  getMap(emploeesName);
-        System.out.println("Повторяющиеся имена: ");
-        nameRepeat(mapName);
-        System.out.println("Имена, отсортированные по убыванию популярности: ");
-        sortName(mapName);
-    }
+   
     public static ArrayList<String> getName(String [] list){
         ArrayList<String> listName = new ArrayList<>();
         for (String el : list) {
@@ -51,6 +43,15 @@ public class task2 {
                 if (listCount.get(i) == item.getValue()) System.out.printf("%s : %d \n", item.getKey(), item.getValue());
             }
         }
+    }
+    public static void main(String[] args) {
+        String[] emploees = new String[] {"Иван Иванов", "Иван Петров", "Сергей Козлов", "Евгений Петров", "Сергей Васильев", "Иван Смирнов", "Андрей Петров"};
+        ArrayList<String> emploeesName = getName(emploees);
+        Map<String, Integer> mapName =  getMap(emploeesName);
+        System.out.println("Повторяющиеся имена: ");
+        nameRepeat(mapName);
+        System.out.println("Имена, отсортированные по убыванию популярности: ");
+        sortName(mapName);
     }
     
 }
