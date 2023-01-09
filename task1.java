@@ -4,16 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class task1{
-    public static void main(String[] args) {
-        Map<String, ArrayList<Integer>> bookPhone = new HashMap<>();
-        addNumber("Ivanov", 123, bookPhone);
-        addNumber("Ivanov", 1234, bookPhone);
-        addNumber("Petrov", 546585, bookPhone);
-        addNumber("Sidorov", 8956477, bookPhone);
-        addNumber("Ivanov", 12356233, bookPhone);
-        addNumber("Petrov", 787897, bookPhone);
-        printBook(bookPhone);
-       }
+    
        // Метод, который добавляет номера в книгу
     public static void addNumber(String key, int value, Map<String, ArrayList<Integer>> map){
         if (map.containsKey(key)) {
@@ -35,4 +26,14 @@ public class task1{
             System.out.printf("%s: %s \n", item.getKey(), phones);
         }
     }
+    public static void main(String[] args) {
+        Map<String, ArrayList<Integer>> bookPhone = new HashMap<>();
+        addNumber("Ivanov", 123, bookPhone);
+        addNumber("Ivanov", 1234, bookPhone);
+        addNumber("Petrov", 546585, bookPhone);
+        addNumber("Sidorov", 8956477, bookPhone);
+        addNumber("Ivanov", 12356233, bookPhone);
+        addNumber("Petrov", 787897, bookPhone);
+        printBook(bookPhone);
+       }
 }
